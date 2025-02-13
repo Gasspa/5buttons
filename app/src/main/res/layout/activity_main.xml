@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#CF440D"
-        android:text="Button"/>
+        android:text="Tak/nie"/>
 
     <Button
         android:id="@+id/button2"
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#AF560D"
-        android:text="Button"/>
+        android:text="Opcje"/>
 
     <Button
         android:id="@+id/button3"
@@ -39,7 +39,7 @@
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:backgroundTint="#CF440D"
-        android:text="Button"/>
+        android:text="Data"/>
 
     <Button
         android:id="@+id/button4"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#CF440D"
-        android:text="Button"/>
+        android:text="Godzina"/>
 
     <Button
         android:id="@+id/button5"

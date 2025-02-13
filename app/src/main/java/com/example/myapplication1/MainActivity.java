@@ -4,6 +4,8 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -33,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(v-> showAlertDialog());
         findViewById(R.id.button2).setOnClickListener(v-> showListDialog());
         findViewById(R.id.button3).setOnClickListener(v-> showDatePickerDialog());
-        findViewById(R.id.button3).setOnClickListener(v-> showtimePickerDialogue());
+        findViewById(R.id.button4).setOnClickListener(v-> showtimePickerDialogue());
+        findViewById(R.id.button5).setOnClickListener(v-> showCustomDialog());
     }
         private void showAlertDialog() {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -94,5 +97,19 @@ public class MainActivity extends AppCompatActivity {
             }
         },hour, minute, true);
         timePickerDialog.show();
+    }
+    private void showCustomDialog(){
+        final android.app.Dialog dialog = new android.app.Dialog(this);
+        dialog.setContentView(R.layout.custom_dialog);
+
+        Button btnSubmit = dialog.findViewById(R.id.btnSubmit);
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this,"Wysłano", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+    dialog.show();
     }
 }
