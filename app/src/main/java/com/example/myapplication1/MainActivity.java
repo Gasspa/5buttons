@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -103,10 +104,11 @@ public class MainActivity extends AppCompatActivity {
         dialog.setContentView(R.layout.custom_dialog);
 
         Button btnSubmit = dialog.findViewById(R.id.btnSubmit);
+        EditText text = dialog.findViewById(R.id.etInput);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,"Wysłano", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,"wyslano " + text.getText().toString(), Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });
